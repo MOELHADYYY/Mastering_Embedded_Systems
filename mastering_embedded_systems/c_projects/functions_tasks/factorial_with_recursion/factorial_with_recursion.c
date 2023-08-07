@@ -10,23 +10,28 @@ scanf("%d",&i);
 printf(" the number is : %d \n",i);
 
 
-if(y==0)
-{
-    printf("factorial undefined");
-}else
-{
+
+
 y = get_factorial(i);
-}
+if (y==1)
+{
+    printf("the factorial is undefined");
+}else{
 printf("the factorial is%d",y);
+}
+
 
 }
+
+
+
 
 
 int get_factorial(int x){
    
     if(x<=0)
     {
-        return 0;
+        return 1;
     }else
     { 
         
