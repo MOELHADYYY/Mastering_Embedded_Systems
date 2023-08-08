@@ -19,8 +19,9 @@ int main () {
 			printf("%d\n",interval1);
 		}
 	}
-
 }
+
+
 int is_prime(int x)
 {
     int i;
@@ -34,12 +35,9 @@ int is_prime(int x)
 		{
 			return 0;
 		}
-		else 
-		{
-			return 1;
-		}
+		
 	}
-
+return 1;
 
 }
 
