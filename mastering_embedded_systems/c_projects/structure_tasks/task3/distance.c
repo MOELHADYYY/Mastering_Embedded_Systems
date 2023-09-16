@@ -1,33 +1,37 @@
 #include <stdio.h>
 
 
-struct distance
+struct student
 {
-   float dist1_inch;
-    float dist1_feet;
-    
-    float dist2_inch;
-    float dist2_feet;
+    char name[30];
+    int roll;
+    float mark;
 };
 
-int add(struct distance x)
-{
-    int res1=x.dist1_inch+x.dist2_inch;
-    int res2=x.dist1_feet+x.dist2_feet;
-    printf("%d \ %d",res1,res2);
-
-}
 
 
 int main() 
 {
-    struct distance x;
-    printf("enter 1st distance");
-    scanf("%f \n %f",&x.dist1_inch,&x.dist1_feet);
+    struct student x[10];
+    for(int i=0;i<10;i++)
+    {
+    printf("enter name");
+    fgets(x[i].name[i],sizeof (x[i].name),stdin);
 
+    printf("enter roll :");
+    scanf("%d",&x[i].roll);
 
-    printf("enter 2nd distance");
-    scanf("%f \n %f",&x.dist2_inch,&x.dist2_feet);
-    add( x );
+    printf("enter mark :");
+    scanf("%f",&x[i].mark);
 
+    }
+
+for(int i = 0; i < 10; i++)
+    {
+        printf("Student name: %s", x[i].name);
+        printf("Student roll: %d\n", x[i].roll);
+        printf("Student mark: %f\n\n", x[i].mark);
+    }
+
+   
 }
